@@ -1,0 +1,11 @@
+  # Bedrock Application Inference Profile
+  WorkshopInferenceProfile:
+    Type: AWS::Bedrock::ApplicationInferenceProfile
+    Properties:
+      InferenceProfileName: workshop-ai-app-profile
+      Description: Inference profile for workshop AI application
+      ModelSource:
+        CopyFrom: arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-text-express-v1
+      Tags:
+        - Key: MyKEY
+          Value: MyVALUE
